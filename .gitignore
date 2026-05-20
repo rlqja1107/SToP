@@ -1,0 +1,10 @@
+*.mp4
+dataset/VQA/MVLU/
+dataset/VQA/Video_MME/
+dataset/fine_grained_task/EventHallusion
+.claude
+result
+*.mp4
+__pycache__
+#pruning/qwen2vl  
+#pruning/example_qwen2vl.py
