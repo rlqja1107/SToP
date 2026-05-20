@@ -14,6 +14,7 @@ _DEFAULT_DATASET_ROOT = os.path.normpath(
 STOP_MU_DEFAULTS = {
     "visionzip": (0.03, 0.0),
     "fastvid":   (0.02, 0.0),
+    "flashvid":  (0.02, 0.0),
     "holitom":   (0.04, 0.07),
 }
 
