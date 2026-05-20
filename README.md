@@ -1,4 +1,4 @@
-# <img src="figure/stop.png" width="80"/> Sink-Token-Aware Pruning for Fine-Grained Video Understanding in Efficient Video LLMs
+# <img src="figure/stop.png" width="40"/> Sink-Token-Aware Pruning for Fine-Grained Video Understanding in Efficient Video LLMs
 
 [![Task](https://img.shields.io/badge/Task-Visual_Token_Pruning-blue)](https://img.shields.io/badge/Task-Visual_Token_Pruning-blue)
 [![Model](https://img.shields.io/badge/Model-Video_LLMs-green)](https://img.shields.io/badge/Model-Video_LLMs-green)
