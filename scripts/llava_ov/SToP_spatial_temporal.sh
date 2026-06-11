@@ -4,7 +4,7 @@
 #   holitom → μ_s=0.04, μ_t=0.07
 
 export CUDA_VISIBLE_DEVICES='0'
-PRUNING='holitom' # visionzip, flashvid, fastvid, prunevid, holitom
+PRUNING='holitom' # visionzip, flashvid, fastvid, holitom
 BACKBONE='lmms-lab/llava-onevision-qwen2-7b-ov' # lmms-lab/LLaVA-Video-7B-Qwen2, lmms-lab/llava-onevision-qwen2-7b-ov
 RETENTION_RATIO=0.1 # 0.1, 0.15, 0.2
 DATASET='EventHallusion' # EventHallusion, VCGBench, VideoComp, Video_MME, MVBench, MLVU

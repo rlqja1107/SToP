@@ -1,3 +1,6 @@
+# Adapted from FlashVID (https://github.com/Fanziyang-v/FlashVID), MIT. Modified for integration into SToP.
+# See THIRD_PARTY_LICENSES.md for details.
+
 import os
 from .llava_arch import LlavaMetaForCausalLM_flashvid
 

@@ -1,0 +1,11 @@
+SToP — Sink-Token-Aware Pruning for Fine-Grained Video Understanding
+Copyright 2026 Kibum Kim and the SToP authors (DSAIL, KAIST)
+
+This product includes software developed by third parties. The original
+copyright, license, and attribution notices for that software are retained
+in the corresponding source files and are summarized in THIRD_PARTY_LICENSES.md,
+with full license texts under the licenses/ directory.
+
+PruneVid (https://github.com/Visual-AI/PruneVid) is NOT distributed as part of
+this product. It is licensed under CC BY-NC-SA 4.0 (NonCommercial) and must be
+obtained separately via pruning/download_prunevid.sh. See THIRD_PARTY_LICENSES.md.

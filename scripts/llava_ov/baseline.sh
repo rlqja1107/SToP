@@ -4,7 +4,7 @@
 # For the no-pruning (vanilla) baseline, see scripts/no_pruning.sh
 
 export CUDA_VISIBLE_DEVICES='7'
-PRUNING='fastvid' # visionzip, flashvid, fastvid, prunevid, holitom
+PRUNING='fastvid' # visionzip, flashvid, fastvid, holitom
 BACKBONE='lmms-lab/llava-onevision-qwen2-7b-ov' # lmms-lab/LLaVA-Video-7B-Qwen2, lmms-lab/llava-onevision-qwen2-7b-ov
 RETENTION_RATIO=0.1
 DATASET='EventHallusion' # EventHallusion, VCGBench, VideoComp, Video_MME, MVBench, MLVU

@@ -41,7 +41,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     )
     # Model selection
     parser.add_argument(
-        "--pruning", type=str, default="holitom", choices=['none', 'prunevid', 'holitom', 'visionzip', 'fastvid', 'flashvid']
+        "--pruning", type=str, default="holitom", choices=['none', 'holitom', 'visionzip', 'fastvid', 'flashvid']
     )
     parser.add_argument("--backbone", default="lmms-lab/llava-onevision-qwen2-7b-ov", type=str,
                         help="Model backbone. Supported: "

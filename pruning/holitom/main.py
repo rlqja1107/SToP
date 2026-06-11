@@ -1,3 +1,6 @@
+# Adapted from HoliTom (https://github.com/cokeshao/HoliTom), Apache-2.0. Modified for integration into SToP.
+# See THIRD_PARTY_LICENSES.md for details.
+
 import os
 from .llava_arch import LlavaMetaForCausalLM_holitom
 from .modeling_qwen2 import Qwen2Model_holitom

@@ -1,3 +1,6 @@
+# Adapted from FlashVID (https://github.com/Fanziyang-v/FlashVID), MIT and LLaVA-NeXT (https://github.com/LLaVA-VL/LLaVA-NeXT), Apache-2.0. Modified for integration into SToP.
+# See THIRD_PARTY_LICENSES.md for details.
+
 from abc import ABC, abstractmethod
 
 import math

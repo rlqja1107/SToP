@@ -2,7 +2,7 @@
 # LLaVA-Video-7B-Qwen2 — Baseline: pruning method WITHOUT SToP.
 
 export CUDA_VISIBLE_DEVICES='0'
-PRUNING='visionzip' # visionzip, flashvid, fastvid, prunevid, holitom
+PRUNING='visionzip' # visionzip, flashvid, fastvid, holitom
 BACKBONE='lmms-lab/LLaVA-Video-7B-Qwen2'
 RETENTION_RATIO=0.1
 DATASET='EventHallusion' # EventHallusion, VCGBench, VideoComp, Video_MME, MVBench, MLVU

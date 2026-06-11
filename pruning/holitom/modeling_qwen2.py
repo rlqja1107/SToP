@@ -1,3 +1,6 @@
+# Adapted from HuggingFace Transformers (Qwen2) (https://github.com/huggingface/transformers), Apache-2.0. Modified for integration into SToP.
+# See THIRD_PARTY_LICENSES.md for details.
+
 from functools import partial
 from typing import Callable, Optional, Tuple, Union
 

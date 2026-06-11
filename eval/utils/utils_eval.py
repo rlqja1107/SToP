@@ -83,10 +83,6 @@ def _set_pruning_env(args):
         )
         os.environ["SPATIAL_TOKENS"] = str(spatial_tokens)
 
-    elif "prunevid" in args.pruning:
-        os.environ["WRAPPER"] = "prunevid"
-        os.environ["RETAIN_RATIO"] = str(args.retention_ratio)
-
     elif "fastvid" in args.pruning:
         os.environ["WRAPPER"] = "fastvid"
         os.environ["fastvid_retention_ratio"] = str(args.retention_ratio)
@@ -180,7 +176,7 @@ def load_model(args):
 def wrapper(model, args):
     """Apply the configured wrapper module to *model* and return the wrapped model."""
     wrapper_name = os.environ.get("WRAPPER")
-    if wrapper_name in ("visionzip", "holitom", "prunevid", "fastvid", "flashvid"):
+    if wrapper_name in ("visionzip", "holitom", "fastvid", "flashvid"):
         wrapper_module = __import__(wrapper_name)
         wrapper_cls = getattr(wrapper_module, wrapper_name)
         return wrapper_cls(model)

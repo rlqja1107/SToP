@@ -84,9 +84,15 @@ This repository supports 3 backbones, each with its own scripts directory:
 Supported pruning methods:
 [VisionZip](https://arxiv.org/pdf/2412.04467),
 [FastVid](https://arxiv.org/pdf/2503.11187),
-[HoliTom](https://arxiv.org/pdf/2505.21334),
-[PruneVid](https://arxiv.org/pdf/2412.16117), and
+[HoliTom](https://arxiv.org/pdf/2505.21334), and
 [FlashVid](https://arxiv.org/pdf/2602.08024).
+
+> **PruneVid** ([paper](https://arxiv.org/pdf/2412.16117)) was used as a baseline
+> in our paper, but its integration code is **not distributed in this repository**.
+> PruneVid is licensed under **CC BY-NC-SA 4.0 (NonCommercial)**, which is
+> incompatible with SToP's Apache-2.0 / MIT licensing. To obtain the original
+> PruneVid implementation for reference, run `bash pruning/download_prunevid.sh`
+> (NonCommercial — see [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md)).
 
 ### Quick start
 
@@ -112,7 +118,39 @@ Inside each script you can adjust `DATASET`, `RETENTION_RATIO`, `PRUNING`, and `
 
 ## Acknowledgement
 
-This code is built upon [LLaVA-NeXT](https://github.com/LLaVA-VL/LLaVA-NeXT), [VisionZip](https://github.com/dvlab-research/VisionZip), [FastVid](https://github.com/LunarShen/FastVID), [PruneVid](https://github.com/visual-ai/prunevid), [FlashVid](https://github.com/Fanziyang-v/FlashVID), and [HoliTom](https://github.com/cokeshao/HoliTom).
+This code is built upon the following open-source projects. We thank the authors
+for releasing their work. Each project's license and the corresponding files in
+this repository are listed in [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md);
+full license texts are under [`licenses/`](licenses/).
+
+| Project | License |
+|---|---|
+| [LLaVA-NeXT](https://github.com/LLaVA-VL/LLaVA-NeXT) | Apache-2.0 |
+| [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) | Apache-2.0 + MIT |
+| [VisionZip](https://github.com/dvlab-research/VisionZip) | Apache-2.0 |
+| [HoliTom](https://github.com/cokeshao/HoliTom) | Apache-2.0 |
+| [FastVid](https://github.com/LunarShen/FastVID) | MIT |
+| [FlashVid](https://github.com/Fanziyang-v/FlashVID) | MIT |
+| [PruneVid](https://github.com/Visual-AI/PruneVid) | CC BY-NC-SA 4.0 — **not bundled**, see note below |
+
+**PruneVid (NonCommercial).** PruneVid is licensed under CC BY-NC-SA 4.0, which is
+incompatible with this repository's Apache-2.0 / MIT licensing, so no
+PruneVid-derived code is included here. If you need it, obtain it separately:
+
+```bash
+bash pruning/download_prunevid.sh
+```
+
+This clones the upstream PruneVid repository (CC BY-NC-SA 4.0) into a git-ignored
+directory for reference. Anything derived from it is bound by CC BY-NC-SA 4.0:
+attribution, ShareAlike, and **NonCommercial use only**.
+
+## License
+
+SToP is released under the **Apache License 2.0** — see [LICENSE](LICENSE).
+All code distributed in this repository is licensed under Apache-2.0 or MIT
+(mutually compatible). Third-party components and their licenses are documented
+in [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
 
 ## Citation
 

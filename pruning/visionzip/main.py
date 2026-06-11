@@ -1,3 +1,6 @@
+# Adapted from VisionZip (https://github.com/dvlab-research/VisionZip), Apache-2.0. Modified for integration into SToP.
+# See THIRD_PARTY_LICENSES.md for details.
+
 import os
 from .utils import apply_info
 from .llava_arch import LlavaMetaForCausalLM_visionzip

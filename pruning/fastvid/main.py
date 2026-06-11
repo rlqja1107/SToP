@@ -1,3 +1,6 @@
+# Adapted from FastVID (https://github.com/LunarShen/FastVID), MIT. Modified for integration into SToP.
+# See THIRD_PARTY_LICENSES.md for details.
+
 import os
 from .llava_arch import LlavaMetaForCausalLM_fastvid
 from .modeling_qwen2 import Qwen2Model_fastvid
@@ -20,9 +23,6 @@ def fastvid(model):
     LlavaMetaForCausalLM.refine_clusters = LlavaMetaForCausalLM_fastvid.refine_clusters
     LlavaMetaForCausalLM.cluster_dpc_knn = LlavaMetaForCausalLM_fastvid.cluster_dpc_knn
     LlavaMetaForCausalLM.merge_frames_dynamic = LlavaMetaForCausalLM_fastvid.merge_frames_dynamic
-    # LlavaMetaForCausalLM.merge_tokens_by_attention_density = LlavaMetaForCausalLM_prunevid.merge_tokens_by_attention_density
-    # LlavaMetaForCausalLM.merge_tokens_by_density = LlavaMetaForCausalLM_prunevid.merge_tokens_by_density
-    # LlavaMetaForCausalLM.merge_tokens_by_clustering = LlavaMetaForCausalLM_prunevid.merge_tokens_by_clustering
     LlavaMetaForCausalLM.add_newline_token = LlavaMetaForCausalLM_fastvid.add_newline_token
     
     LlavaMetaForCausalLM.fastvid_retention_ratio = float(os.environ['fastvid_retention_ratio'])

@@ -419,7 +419,7 @@ class SigLipEncoder(nn.Module):
         
         for layer_idx, encoder_layer in enumerate(self.layers):
             if output_hidden_states:
-                if wrapper in ["visionzip", "holitom", "prunevid", 'fastvid', 'flashvid']:
+                if wrapper in ["visionzip", "holitom", 'fastvid', 'flashvid']:
                     if layer_idx==len(self.layers)-1:
                         encoder_states = encoder_states + (hidden_states,)
                 else:
@@ -442,7 +442,7 @@ class SigLipEncoder(nn.Module):
             hidden_states = layer_outputs[0]
 
             if output_attentions:
-                if wrapper in ["visionzip", "holitom", 'prunevid', 'fastvid', 'flashvid']:
+                if wrapper in ["visionzip", "holitom", 'fastvid', 'flashvid']:
                    if layer_idx==len(self.layers)-1:
                         all_attentions = all_attentions + (layer_outputs[1],)
                 else:
@@ -647,7 +647,7 @@ class SigLipVisionTower(nn.Module):
                 metric = self.vision_tower.vision_model.encoder.layers[-1].metric
                 return hidden_states, attn_weights.mean(dim=1).mean(dim=1), metric, images.dtype
             
-            if wrapper in ["holitom", 'prunevid', 'flashvid', 'fastvid']:
+            if wrapper in ["holitom", 'flashvid', 'fastvid']:
                 image_forward_outs = self.vision_tower(images.to(device=self.device, dtype=self.dtype), output_hidden_states=True, output_attentions=True)
                 attn_weights  = image_forward_outs.attentions[-1]
                 hidden_states = image_forward_outs.hidden_states[-1]

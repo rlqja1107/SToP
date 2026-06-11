@@ -6,5 +6,11 @@ dataset/fine_grained_task/EventHallusion
 result
 *.mp4
 __pycache__
-#pruning/qwen2vl  
+*.egg-info/
+
+# Upstream PruneVid (CC BY-NC-SA 4.0) fetched by pruning/download_prunevid.sh.
+# Kept out of the repo so SToP stays Apache-2.0 + MIT only — never commit this.
+pruning/prunevid_upstream/
+
+#pruning/qwen2vl
 #pruning/example_qwen2vl.py
